@@ -85,6 +85,8 @@ int print_pointer(va_list types, char buffer[],
 /*Function to print string in reverse*/
 int print_reverse(va_list types, char buffer[],
 	int flags, int width, int precision, int size);
-
+/*Function to print a string in rot 13*/
+int print_rot13string(va_list types, char buffer[],
+	int flags, int width, int precision, int size);
 
 #endif /* MAIN_H */
