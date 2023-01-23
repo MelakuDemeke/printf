@@ -92,5 +92,6 @@ int print_rot13string(va_list types, char buffer[],
 /****************** UTILS ******************/
 int is_printable(char);
 int append_hexa_code(char, char[], int);
+int is_digit(char);
 
 #endif /* MAIN_H */
