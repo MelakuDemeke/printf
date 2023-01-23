@@ -99,5 +99,7 @@ long int convert_size_unsgnd(unsigned long int num, int size);
 /* write handler */
 int handle_write_char(char c, char buffer[],
 	int flags, int width, int precision, int size);
+int write_number(int is_positive, int ind, char buffer[],
+	int flags, int width, int precision, int size);
 
 #endif /* MAIN_H */
