@@ -23,6 +23,7 @@ va_list list, char buffer[], int flags, int width, int precision, int size);
 #define F_SPACE 16
 
 #define BUFF_SIZE 1024
+#define UNUSED(x) (void)(x)
 
 /* Functions to handle other specifiers */
 int get_flags(const char *format, int *i);
