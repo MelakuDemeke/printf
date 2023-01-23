@@ -13,7 +13,7 @@ void print_buffer(char buffer[], int *index_of_buffer);
 int _printf(const char *format, ...)
 {
 	int i, index_of_buffer = 0, printed_chars = 0;
-	int flags, width, precision;
+	int flags, width, precision, size;
 	char buffer[BUFF_SIZE];
 	va_list list;
 
@@ -38,7 +38,9 @@ int _printf(const char *format, ...)
 			flags = get_flags(format, &i);
 			width = get_width(format, &i, list);
 			precision = get_precision(format, &i, list);
-
+			size = get_size(format, &i);
+			++i;
+			
 		}
 	}
 
