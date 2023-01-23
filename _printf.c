@@ -13,7 +13,7 @@ void print_buffer(char buffer[], int *buff_ind);
 int _printf(const char *format, ...)
 {
 	int i, buff_ind = 0, printed_chars = 0;
-	char buffer[1024];
+	char buffer[BUFF_SIZE];
 	va_list list;
 
 	if (format == NULL)
@@ -26,7 +26,7 @@ int _printf(const char *format, ...)
 		if (format[i] != '%')
 		{
 			buffer[buff_ind++] = format[i];
-			if (buff_ind == 1024)
+			if (buff_ind == BUFF_SIZE)
 				print_buffer(buffer, &buff_ind);
 
 			printed_chars++;
