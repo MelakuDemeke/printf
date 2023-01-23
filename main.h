@@ -8,4 +8,8 @@ int _putchar(char c);
 
 int _printf(const char *format, ...);
 
+/* SIZES */
+#define S_LONG 2
+#define S_SHORT 1
+
 #endif /* MAIN_H */
