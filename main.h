@@ -19,4 +19,6 @@ int _printf(const char *format, ...);
 #define F_HASH 8
 #define F_SPACE 16
 
+#define BUFF_SIZE 1024
+
 #endif /* MAIN_H */
