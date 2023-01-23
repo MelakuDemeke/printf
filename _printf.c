@@ -13,7 +13,7 @@ void print_buffer(char buffer[], int *index_of_buffer);
 int _printf(const char *format, ...)
 {
 	int i, index_of_buffer = 0, printed_chars = 0;
-	int flags;
+	int flags, width;
 	char buffer[BUFF_SIZE];
 	va_list list;
 
