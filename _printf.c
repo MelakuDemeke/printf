@@ -32,3 +32,15 @@ int _printf(const char *format, ...)
 
 	va_end(list);
 }
+
+/**
+* print_buffer - print content from buffer
+*
+* @buffer: array of chars
+* @buff_ind: position to next char
+*/
+
+void print_buffer(char buffer[], int *buff_ind)
+{
+	
+}
