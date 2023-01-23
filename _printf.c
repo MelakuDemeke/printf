@@ -24,8 +24,8 @@ int _printf(const char *format, ...)
 		{
 			buffer[buff_ind++] = format[i];
 			if (buff_ind == 1024)
-				// print it,
-			
+				print_buffer(buffer, &buff_ind);
+
 			printed_chars++;
 		}
 	}
