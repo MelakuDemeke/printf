@@ -96,4 +96,8 @@ int is_digit(char);
 long int convert_size_number(long int num, int size);
 long int convert_size_unsgnd(unsigned long int num, int size);
 
+/* write handler */
+int handle_write_char(char c, char buffer[],
+	int flags, int width, int precision, int size);
+
 #endif /* MAIN_H */
