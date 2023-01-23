@@ -73,3 +73,23 @@ int write_number(int is_negative, int ind, char buffer[],
 	return (write_num(ind, buffer, flags, width, precision,
 		length, padd, extra_ch));
 }
+
+/**
+ * write_num - Write a number using a bufffer
+ * @ind: Index at which the number starts on the buffer
+ * @buffer: Buffer
+ * @flags: Flags
+ * @width: width
+ * @prec: Precision specifier
+ * @length: Number length
+ * @padd: Pading char
+ * @extra_c: Extra char
+ *
+ * Return: Number of printed chars.
+ */
+int write_num(int ind, char buffer[],
+	int flags, int width, int prec,
+	int length, char padd, char extra_c)
+{
+	
+}
