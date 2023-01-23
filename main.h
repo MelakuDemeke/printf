@@ -21,4 +21,10 @@ int _printf(const char *format, ...);
 
 #define BUFF_SIZE 1024
 
+/* Functions to handle other specifiers */
+int get_flags(const char *format, int *i);
+int get_width(const char *format, int *i, va_list list);
+int get_precision(const char *format, int *i, va_list list);
+int size_cast_arg(const char *format, int *i);
+
 #endif /* MAIN_H */
