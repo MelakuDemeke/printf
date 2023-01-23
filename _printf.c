@@ -1,6 +1,6 @@
 #include "main.h"
 
-void print_buffer(char buffer[], int *buff_ind);
+void print_buffer(char buffer[], int *index_of_buffer);
 
 /**
  * _printf - replica of printf
@@ -12,7 +12,8 @@ void print_buffer(char buffer[], int *buff_ind);
 
 int _printf(const char *format, ...)
 {
-	int i, buff_ind = 0, printed_chars = 0;
+	int i, index_of_buffer = 0, printed_chars = 0;
+	int flags;
 	char buffer[BUFF_SIZE];
 	va_list list;
 
@@ -25,15 +26,16 @@ int _printf(const char *format, ...)
 	{
 		if (format[i] != '%')
 		{
-			buffer[buff_ind++] = format[i];
-			if (buff_ind == BUFF_SIZE)
-				print_buffer(buffer, &buff_ind);
+			buffer[index_of_buffer++] = format[i];
+			if (index_of_buffer == BUFF_SIZE)
+				print_buffer(buffer, &index_of_buffer);
 
 			printed_chars++;
 		}
 		else
 		{
-			print_buffer(buffer, &buff_ind);
+			print_buffer(buffer, &index_of_buffer);
+			flags = get_flags(format, &i);
 		}
 	}
 
@@ -44,13 +46,13 @@ int _printf(const char *format, ...)
 * print_buffer - print content from buffer
 *
 * @buffer: array of chars
-* @buff_ind: position to next char
+* @index_of_buffer: position to next char
 */
 
-void print_buffer(char buffer[], int *buff_ind)
+void print_buffer(char buffer[], int *index_of_buffer)
 {
-	if (*buff_ind > 0)
-		write(1, &buffer[0], *buff_ind);
+	if (*index_of_buffer > 0)
+		write(1, &buffer[0], *index_of_buffer);
 
-	*buff_ind = 0;
+	*index_of_buffer = 0;
 }
