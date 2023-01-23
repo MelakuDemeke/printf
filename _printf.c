@@ -1,25 +1,33 @@
 #include "main.h"
 
 /**
-* _printf - replica of printf
-*
-* @format: formater for printf
-* 
-* Return: -1 -> if @format is null 
-*/
+ * _printf - replica of printf
+ *
+ * @format: formater for printf
+ * 
+ * Return: -1 -> if @format is null 
+ */
 
 int _printf(const char *format, ...)
 {
-	int i;
+	int i, buff_ind = 0, printed_chars = 0;
+	char buffer[1024];
 
 	if (format == NULL)
 		return (-1);
 	
 	va_start(list, format);
 
-	for (i = 0; i < format; i++)
+	for (i = 0; format && format[i] != '\0'; i++)
 	{
-
+		if (format[i] != '%')
+		{
+			buffer[buff_ind++] = format[i];
+			if (buff_ind == 1024)
+				// print it,
+			
+			printed_chars++;
+		}
 	}
 
 	va_end(list);
