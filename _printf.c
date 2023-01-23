@@ -14,6 +14,7 @@ int _printf(const char *format, ...)
 {
 	int i, buff_ind = 0, printed_chars = 0;
 	char buffer[1024];
+	va_list list;
 
 	if (format == NULL)
 		return (-1);
