@@ -31,6 +31,10 @@ int _printf(const char *format, ...)
 
 			printed_chars++;
 		}
+		else
+		{
+			print_buffer(buffer, &buff_ind);
+		}
 	}
 
 	va_end(list);
