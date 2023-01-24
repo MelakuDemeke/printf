@@ -2,7 +2,11 @@
 
 ![banner](img/alx_printf_banner.png)
 
-***
+![GitHub repo size](https://img.shields.io/github/repo-size/MelakuDemeke/printf)
+![GitHub issues](https://img.shields.io/github/issues/MelakuDemeke/printf)
+![GitHub Repo stars](https://img.shields.io/github/stars/MelakuDemeke/printf?logo=github&style=flat)
+![GitHub forks](https://img.shields.io/github/forks/MelakuDemeke/printf?logo=github&style=falt)
+![GitHub commit activity](https://img.shields.io/github/commit-activity/m/MelakuDemeke/printf?logo=github)
 ## Mandatory Tasks ##
 ***
 0. I'm not going anywhere. You can print that wherever you want to. I'm here and I'm a Spur for life - Write a function that produces output according to a format.
