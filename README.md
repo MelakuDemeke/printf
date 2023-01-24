@@ -47,6 +47,6 @@
       * r : prints the reversed string
 14. The flood of print has turned reading into a process of gulping rather than savoring
     * Handle the following custom conversion specifier:
-      * R: prints the rot13'ed string
+      * `R`: prints the rot13'ed string
 15. *
     * GitHub repository: `printf`
