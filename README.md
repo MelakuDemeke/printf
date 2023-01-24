@@ -38,3 +38,5 @@
 9. Print some money and give it to us for the rain forests - Handle the field width for non-custom conversion specifiers.
 10. The negative is the equivalent of the composer's score, and the print the performance
     * Handle the precision for non-custom conversion specifiers.
+11. It's depressing when you're still around and your albums are out of print
+    * Handle the 0 flag character for non-custom conversion specifiers.
