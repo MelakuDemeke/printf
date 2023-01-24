@@ -6,8 +6,8 @@ void print_buffer(char buffer[], int *index_of_buffer);
  * _printf - replica of printf
  *
  * @format: formater for printf
- * 
- * Return: -1 -> if @format is null 
+ *
+ * Return: -1 -> if @format is null
  */
 
 int _printf(const char *format, ...)
@@ -19,7 +19,7 @@ int _printf(const char *format, ...)
 
 	if (format == NULL)
 		return (-1);
-	
+
 	va_start(list, format);
 
 	for (i = 0; format && format[i] != '\0'; i++)
@@ -45,14 +45,13 @@ int _printf(const char *format, ...)
 			if (printed == -1)
 				return (-1);
 			printed_chars += printed;
-			
 		}
 	}
 
 	print_buffer(buffer, &index_of_buffer);
 
 	va_end(list);
-	
+
 	return (printed_chars);
 }
 
