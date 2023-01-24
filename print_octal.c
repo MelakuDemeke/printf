@@ -12,7 +12,7 @@
  *
  * Return: Number of chars printed
  */
- 
+
 int print_octal(va_list types, char buffer[],
 	int flags, int width, int precision, int size)
 {
