@@ -1,5 +1,13 @@
-# printf
-***
+# _printf
+
+![banner](img/alx_printf_banner.png)
+
+![GitHub repo size](https://img.shields.io/github/repo-size/MelakuDemeke/printf)
+![GitHub issues](https://img.shields.io/github/issues/MelakuDemeke/printf)
+![GitHub Repo stars](https://img.shields.io/github/stars/MelakuDemeke/printf?logo=github&style=flat)
+![GitHub forks](https://img.shields.io/github/forks/MelakuDemeke/printf?logo=github&style=falt)
+![GitHub commit activity](https://img.shields.io/github/commit-activity/m/MelakuDemeke/printf?logo=github)
+
 ## Overview ##
 
 One of the most common but crucial function in the C programmers life is a printf() function. We frequently and often use it to print out an output or return a value to a screen or terminal. But, what is printf()? How does it work?  
@@ -45,20 +53,6 @@ There are number of format specifiers. For instance “i” or “d” for signe
 
 In this project,  task 0, 1, 2 and 3 shows us how each conversion specifiers are handled by printf(). 
 
-
-
-
-
-
-# _printf
-
-![banner](img/alx_printf_banner.png)
-
-![GitHub repo size](https://img.shields.io/github/repo-size/MelakuDemeke/printf)
-![GitHub issues](https://img.shields.io/github/issues/MelakuDemeke/printf)
-![GitHub Repo stars](https://img.shields.io/github/stars/MelakuDemeke/printf?logo=github&style=flat)
-![GitHub forks](https://img.shields.io/github/forks/MelakuDemeke/printf?logo=github&style=falt)
-![GitHub commit activity](https://img.shields.io/github/commit-activity/m/MelakuDemeke/printf?logo=github)
 ## Mandatory Tasks ##
 ***
 0. I'm not going anywhere. You can print that wherever you want to. I'm here and I'm a Spur for life - Write a function that produces output according to a format.
