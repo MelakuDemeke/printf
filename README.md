@@ -45,3 +45,6 @@
 13. Print is the sharpest and the strongest weapon of our party
     * Handle the following custom conversion specifier:
       * r : prints the reversed string
+14. The flood of print has turned reading into a process of gulping rather than savoring
+    * Handle the following custom conversion specifier:
+      * R: prints the rot13'ed string
