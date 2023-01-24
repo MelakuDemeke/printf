@@ -9,7 +9,7 @@
  * @size: Size specifier
  * Return: Number of chars printed.
  */
-int handle_write_char(char c, char buffer[], 
+int handle_write_char(char c, char buffer[],
 int flags, int width, int precision, int size)
 {
 	int i = 0;
@@ -23,7 +23,7 @@ int flags, int width, int precision, int size)
 
 	buffer[i++] = c;
 	buffer[i] = '\0';
-	
+
 	if (width > 1)
 	{
 		buffer[BUFF_SIZE - 1] = '\0';
