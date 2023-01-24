@@ -60,11 +60,17 @@ Beside sting `s`, there are number of format specifiers. For instance `i` or `d`
 
 Table 1.1 Partial List of Specifiers and their output.
 
-
-
 In this project,  task 0, 1, 2 and 3 shows us how each conversion specifiers are handled by printf(). 
 
-Othe Format tags prototypes are [flags][width][.precision] and [length].
+Other Format tags prototypes of printf() are [flags][width][.precision] and [length].
+
+### Flags ###
+
+### Width ###
+
+### precision ###
+
+### length ###
 
 ## Mandatory Tasks ##
 ***
