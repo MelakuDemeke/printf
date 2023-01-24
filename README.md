@@ -1,5 +1,55 @@
 # printf
 ***
+## Overview ##
+
+One of the most common but crucial function in the C programmers life is a printf() function. We frequently and often use it to print out an output or return a value to a screen or terminal. But, what is printf()? How does it work?  
+In this project we will dive in deeper and will try to understand what it is and its functionality by building our own printf() function. 
+ 
+## So first, what is Printf()? ##
+
+Printf is a C library function that sends formatted output to standard output(stdout). printf() has the following declaration:- 
+
+```int printf(const char *format, …)```
+
+A printf() function has a return value of integer which is the number of characters printed, excluding the null byte used to end output to strings. 
+
+In its simplest form, it accepts one argument. In this case, the format parameter will be the string that contains the text to be written to stdout. For instance, in our very first hello world C program as shown below, printf contains one parameter which contains a string, Hello, World!. 
+
+```
+Include <stdio.h>
+/**
+*main - a function to print out a string
+* Return: 0 Always //int
+*/
+Int main(void)
+{
+printf(“Hello, World!\n”);
+return (0);
+}
+```
+However, it optionally can also contain embedded format tags that are replaced by the values specified in subsequent additional arguments and formatted as requested.
+
+For example:- 
+…
+	```printf(“My name is %s\n”, name);``` 
+…
+Here, printf() takes two arguments. A first argument that is a string inside the double quote and a second argument which is string variable called `name`. How this work is, Printf() starts printing from the first character and go to the next and so on. When it reaches to a percentile or modulo (%) sign which is a format specifier, it will know that it has to print the next character according to the format specified. Therefore, it first will go to the next argument and check the variable storing the format specifier and print out its value, character by character, according to the format specified. In this case, a string (%s) value from a variable called “name”. 
+
+There are number of format specifiers. For instance “i” or “d” for signed decimal and ‘f’ for float as shown in the following table. 
+
+| Specifiers  | Their Output |
+|:------------  |:----------------|
+|c	        | Character      |
+|d or I	        | signed decimal integer |
+
+
+In this project,  task 0, 1, 2 and 3 shows us how each conversion specifiers are handled by printf(). 
+
+
+
+
+
+
 ## Mandatory Tasks ##
 ***
 0. I'm not going anywhere. You can print that wherever you want to. I'm here and I'm a Spur for life - Write a function that produces output according to a format.
