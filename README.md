@@ -1,4 +1,7 @@
-# printf
+# _printf
+
+![banner](img/alx_printf_banner.png)
+
 ***
 ## Mandatory Tasks ##
 ***
