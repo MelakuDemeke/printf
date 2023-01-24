@@ -5,7 +5,7 @@
 One of the most common but crucial function in the C programmers life is a printf() function. We frequently and often use it to print out an output or return a value to a screen or terminal. But, what is printf()? How does it work?  
 In this project we will dive in deeper and will try to understand what it is and its functionality by building our own printf() function. 
  
-## So first, what is Printf()? ##
+### So first, what is Printf()? ###
 
 Printf is a C library function that sends formatted output to standard output(stdout). printf() has the following declaration:- 
 
@@ -50,6 +50,15 @@ In this project,  task 0, 1, 2 and 3 shows us how each conversion specifiers are
 
 
 
+# _printf
+
+![banner](img/alx_printf_banner.png)
+
+![GitHub repo size](https://img.shields.io/github/repo-size/MelakuDemeke/printf)
+![GitHub issues](https://img.shields.io/github/issues/MelakuDemeke/printf)
+![GitHub Repo stars](https://img.shields.io/github/stars/MelakuDemeke/printf?logo=github&style=flat)
+![GitHub forks](https://img.shields.io/github/forks/MelakuDemeke/printf?logo=github&style=falt)
+![GitHub commit activity](https://img.shields.io/github/commit-activity/m/MelakuDemeke/printf?logo=github)
 ## Mandatory Tasks ##
 ***
 0. I'm not going anywhere. You can print that wherever you want to. I'm here and I'm a Spur for life - Write a function that produces output according to a format.
@@ -86,3 +95,23 @@ In this project,  task 0, 1, 2 and 3 shows us how each conversion specifiers are
     * `h`
 * Conversion specifiers to handle: `d`, `i`, `u`, `o`, `x`, `X`
 9. Print some money and give it to us for the rain forests - Handle the field width for non-custom conversion specifiers.
+10. The negative is the equivalent of the composer's score, and the print the performance
+    * Handle the precision for non-custom conversion specifiers.
+11. It's depressing when you're still around and your albums are out of print
+    * Handle the `0` flag character for non-custom conversion specifiers.
+12.  Every time that I wanted to give up, if I saw an interesting textile, print what ever, suddenly I would see a collection
+    * Handle the `-` flag character for non-custom conversion specifiers.
+13. Print is the sharpest and the strongest weapon of our party
+    * Handle the following custom conversion specifier:
+      * `r` : prints the reversed string
+14. The flood of print has turned reading into a process of gulping rather than savoring
+    * Handle the following custom conversion specifier:
+      * `R`: prints the rot13'ed string
+15. *
+    * All the above options work well together.
+
+***
+### contributors
+<a href="https://github.com/MelakuDemeke/printf/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=MelakuDemeke/printf" />
+</a>
