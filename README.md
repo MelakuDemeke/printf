@@ -47,13 +47,24 @@ Beside sting `s`, there are number of format specifiers. For instance `i` or `d`
 
 | Specifiers  | Their Output |
 |:------------  |:----------------|
-|c	        | Character      |
-|d or I	        | signed decimal integer |
+|%c	        | A single Character      |
+|%d or %i	        | signed decimal integer |
+|%e                 | an exponential floating-point number |
+|%f                 | a floating-point number |
+|%g                 | a general-format floating-point number |
+|%o                 | number in octal (base 8) |
+|%u                 | Unsigned decimal integer |
+|%x                 | Unsigned hexadecimal integer |
+|%X                 | Unsigned hexadecimal integer (capital letters)|
+|%%                 | a percent sign |
+
+Table 1.1 Partial List of Specifiers and their output.
+
 
 
 In this project,  task 0, 1, 2 and 3 shows us how each conversion specifiers are handled by printf(). 
 
-Othe Format tags prototypes are %[flags][width][.precision] and [length].
+Othe Format tags prototypes are [flags][width][.precision] and [length].
 
 ## Mandatory Tasks ##
 ***
