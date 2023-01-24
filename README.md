@@ -7,17 +7,21 @@ Mandatory Tasks
     * write output to stdout, the standard output stream
     * `format` is a character string. The format string is composed of zero or more directives. 
     * You need to handle the following conversion specifiers:
-        * c
-        * s
-        * %
+        * `c`
+        * `s`
+        * `%`
 1. Education is when you read the fine print. Experience is what you get if you don't. Handle the following conversion specifiers:
-    * d
-    * i
+    * `d`
+    * `i`
 2. With a face like mine, I do better in print - Handle the following custom conversion specifiers:
-    * b: the unsigned int argument is converted to binary
+    * `b`: the unsigned int argument is converted to binary
 3. What one has not experienced, one will never understand in print - Handle the following conversion specifiers
-    * u
-    * o
-    * x
-    * X
+    * `u`
+    * `o`
+    * `x`
+    * `X`
 4. Nothing in fine print is ever good news - Use a local buffer of 1024 chars in order to call `write` as little as possible.
+5. My weakness is wearing too much leopard print - Handle the following custom conversion specifier:
+    * `S` : prints the string.
+    * Non printable characters (0 < ASCII value < 32 or >= 127) are printed this way: `\x`, followed by the ASCII code value in hexadecimal (upper case - always 2 characters)
+    
