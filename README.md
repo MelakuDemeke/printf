@@ -57,3 +57,9 @@
       * `R`: prints the rot13'ed string
 15. *
     * All the above options work well together.
+
+***
+### contributors
+<a href="https://github.com/MelakuDemeke/printf/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=MelakuDemeke/printf" />
+</a>
