@@ -59,11 +59,11 @@ int print_string(va_list types, char buffer[],
 int print_percent(va_list types, char buffer[],
 	int flags, int width, int precision, int size);
 
-    /* Functions to print numbers */
+/* Functions to print numbers */
 int print_int(va_list types, char buffer[],
-    int flags, int width, int precision, int size);
+	int flags, int width, int precision, int size);
 int print_binary(va_list types, char buffer[],
-    int flags, int width, int precision, int size);
+	int flags, int width, int precision, int size);
 int print_unsigned(va_list types, char buffer[],
 	int flags, int width, int precision, int size);
 int print_octal(va_list types, char buffer[],
@@ -109,5 +109,5 @@ int write_pointer(char buffer[], int ind, int length,
 int write_unsgnd(int is_negative, int ind,
 char buffer[],
 	int flags, int width, int precision, int size);
-  
+
 #endif /* MAIN_H */
