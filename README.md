@@ -45,6 +45,8 @@ Here, printf() takes two arguments. A first argument that is a string inside the
 
 Beside sting `s`, there are number of format specifiers. For instance `i` or `d` for signed decimal and `f` for float as shown in the following table. 
 
+Table 1.1 Partial List of Specifiers and their output.
+
 | Specifiers  | Their Output |
 |:------------  |:----------------|
 |%c	        | A single Character      |
@@ -58,8 +60,6 @@ Beside sting `s`, there are number of format specifiers. For instance `i` or `d`
 |%X                 | Unsigned hexadecimal integer (capital letters)|
 |%%                 | a percent sign |
 
-Table 1.1 Partial List of Specifiers and their output.
-
 In this project,  task 0, 1, 2 and 3 shows us how each conversion specifiers are handled by printf(). 
 
 Other Format tags prototypes of printf() are [width][flags][.precision] and [length].
@@ -70,7 +70,7 @@ Width is one of printf()'s special option that lets it to pre-determine size of 
     * (number) - is minimum number of characters to be printed.For instance, saying (%3i) will guarantee for the number to only take up to minimum of 3 spaces. If the value to be printed is longer, more spaces will be added rather than trancating the result. This option is very importnant specially when printing out a table.
 
     Note: if the number to be printed is shorter than the specified space, the result will be padded with blank spaces or a leading zeros, a dollar, equal or a star signs inorder to keep the bad guys from changing the blank space into something else.
-        * * - here the width is specified as "an additional integer value argument preceding the argument that has to be formatted".
+    * * - here the width is specified as "an additional integer value argument preceding the argument that has to be formatted".
 
 ### Flags ###
 
