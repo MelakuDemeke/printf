@@ -68,13 +68,15 @@ Other Format tags prototypes of printf() are [width][flags][.precision] and [len
 Width is one of printf()'s special option that lets it to pre-determine size of the result rather than simply take as much space as it needed. 
 
     * (number) - is minimum number of characters to be printed.For instance, saying (%3i) will guarantee for the number to only take up to minimum of 3 spaces. If the value to be printed is longer, more spaces will be added rather than trancating the result. This option is very importnant specially when printing out a table.
-
     Note: if the number to be printed is shorter than the specified space, the result will be padded with blank spaces or a leading zeros, a dollar, equal or a star signs inorder to keep the bad guys from changing the blank space into something else.
     * * - here the width is specified as "an additional integer value argument preceding the argument that has to be formatted".
 
 ### Flags ###
 
 printf() can use different options called `flags` to modify results. For instance, a `-` flag justify a number to the left. It can also print a positive number and zero by using a plus (`+`) in the format specifier. Partial list of flags are shown in the table below.
+
+Table 1.2: Flags and their discriptions 
+
 |Flag   | Discription | Example | Remarks |
 |:-------|:-----------|:--------|:--------|
 |-       | to justify left| %-3i |Right justification is the default.|
