@@ -62,11 +62,29 @@ Table 1.1 Partial List of Specifiers and their output.
 
 In this project,  task 0, 1, 2 and 3 shows us how each conversion specifiers are handled by printf(). 
 
-Other Format tags prototypes of printf() are [flags][width][.precision] and [length].
+Other Format tags prototypes of printf() are [width][flags][.precision] and [length].
+
+### Width ###
+Width is one of printf()'s special option that lets it to pre-determine size of the result rather than simply take as much space as it needed. 
+
+    * (number) - is minimum number of characters to be printed.For instance, saying (%3i) will guarantee for the number to only take up to minimum of 3 spaces. If the value to be printed is longer, more spaces will be added rather than trancating the result. This option is very importnant specially when printing out a table.
+
+    Note: if the number to be printed is shorter than the specified space, the result will be padded with blank spaces or a leading zeros, a dollar, equal or a star signs inorder to keep the bad guys from changing the blank space into something else.
+        * * - here the width is specified as "an additional integer value argument preceding the argument that has to be formatted".
 
 ### Flags ###
 
-### Width ###
+printf() can use different options called `flags` to modify results. For instance, a `-` flag justify a number to the left. It can also print a positive number and zero by using a plus (`+`) in the format specifier. Partial list of flags are shown in the table below.
+|Flag   | Discription | Example | Remarks |
+|:-------|:-----------|:--------|:--------|
+|-       | to justify left| %-3i |Right justification is the default.|
+|+       | to print plus on positive numbers|%+3i |- zero is treated as a positive number, Shorter numbers are padded. Longer numbers are unchanged.|
+|0       | to leading zero fill | %03i        |  Left-pads the number with zeroes (0) instead of spaces|
+|#       | to preceded with 0, 0x or 0X for o, x, X respectively for values different than zero|       |     |
+
+
+
+
 
 ### precision ###
 
