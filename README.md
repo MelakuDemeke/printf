@@ -11,7 +11,7 @@
 ## Overview ##
 
 One of the most common but crucial function in the C programmers life is a printf() function. We frequently and often use it to print out an output or return a value to a screen or terminal. But, what is printf()? How does it work?  
-In this project we will dive in deeper and we will try to understand what it is and its functionality by building our own printf() function. 
+In this project we will dig in deeper and we will try to understand what it is and its functionality by building our own printf() function. 
  
 ### So first, what is Printf()? ###
 
@@ -19,9 +19,7 @@ Printf is a C library function that sends formatted output to standard output(st
 
 ```int printf(const char *format, …)```
 
-A printf() function has a return value of integer which is the number of characters printed, excluding the null byte used to end output to strings. 
-
-In its simplest form, it accepts one argument. In this case, the `format` parameter will be the string that contains the text to be written to `stdout`. For instance, in our very first "hello world" C program as shown below, printf contains one parameter which contains a string, Hello, World!. 
+In its simplest form, printf() accepts one argument. In this case, the `format` parameter will be the string that contains the text to be written to `stdout`. For instance, in our very first "hello world" C program as shown below, printf contains one parameter which contains a string, Hello, World!. 
 
 ```
 Include <stdio.h>
@@ -41,9 +39,9 @@ For example:-
 …
 	```printf(“My name is %s\n”, name);``` 
 …
-Here, printf() takes two arguments. A first argument that is a string inside the double quote and a second argument which is string variable called `name`. How this work is, Printf() starts printing from the first character and go to the next and so on. When it reaches to a percentile or modulo (%) sign which is a format specifier, it will know that it has to print the next character according to the format specified. Therefore, it first will go to the next argument and check the variable storing the format specifier and print out its value, character by character, according to the format specified. In this case, a string (%s) value from a variable called “name”. 
+Here, printf() takes two arguments. A first argument that is a string inside the double quote and a second argument which is string variable called `name`. How this work is, Printf() starts printing from the first character and go to the next and so on. When it reaches to a percentile or modulo (%) sign which is a format specifier, it will know that it has to print the next character according to the format specified. Therefore, it first will go to the next argument and check the variable storing the format specifier and print out its value, character by character, according to the format specified. In this case, a string (%s) value from a variable named “name”. 
 
-Beside sting `s`, there are number of format specifiers. For instance `i` or `d` for signed decimal and `f` for float as shown in the following table. 
+Beside string `s`, there are number of format specifiers. For instance `i` or `d` for signed decimal and `f` for float as shown in the following table. 
 
 Table 1.1 Partial List of Specifiers and their output.
 
@@ -60,64 +58,71 @@ Table 1.1 Partial List of Specifiers and their output.
 |%X                 | Unsigned hexadecimal integer (capital letters)|
 |%%                 | a percent sign |
 
-In this project,  task 0, 1, 2 and 3 shows us how each conversion specifiers are handled by printf(). 
-
-Other Format tags prototypes of printf() are [width][flags][.precision] and [length].
+Other Format tags prototypes of printf() are [width][flags][.precision] and [length modifier].
 
 ### Width ###
-Width is one of printf()'s special option that lets it to pre-determine size of the result rather than simply take as much space as it needed. 
+Width is one of `printf()` special option that lets us to pre-determine size of the result rather than simply take as much space as needed. 
 
-    * (number) - is minimum number of characters to be printed.For instance, saying (%3i) will guarantee for the number to only take up to minimum of 3 spaces. If the value to be printed is longer, more spaces will be added rather than trancating the result. This option is very importnant specially when printing out a table.
+    * (number) - is minimum number of characters to be printed.
+    For instance, saying (%3i) will guarantee for the number to only take up to minimum of 3 spaces. If the value to be printed is longer, more spaces will be added rather than trancating the result. This option is very importnant specially when printing out a table.
     Note: if the number to be printed is shorter than the specified space, the result will be padded with blank spaces or a leading zeros, a dollar, equal or a star signs inorder to keep the bad guys from changing the blank space into something else.
     * * - here the width is specified as "an additional integer value argument preceding the argument that has to be formatted".
 
 ### Flags ###
 
-printf() can use different options called `flags` to modify results. For instance, a `-` flag justify a number to the left. It can also print a positive number and zero by using a plus (`+`) in the format specifier. Partial list of flags are shown in the table below.
+printf() also can use an option called `flags` following the character % to modify results. For instance, a `-` flag justify a number to the left and a plus (`+`) in the format specifier print a positive number and zero. The table below shows  Partial list of flags used by `printf()`.
 
 Table 1.2: Partial list of flags and their discription 
 
-|Flag   | Discription | Example | Remarks |
+|Flags   | Discription | Example | Remarks |
 |:-------|:-----------|:--------|:--------|
 |-       | to justify left| %-3i |Right justification is the default.|
 |+       | to print plus on positive numbers|%+3i |- zero is treated as a positive number, Shorter numbers are padded. Longer numbers are unchanged.|
 |0       | to leading zero fill | %03i        |  Left-pads the number with zeroes (0) instead of spaces|
 |#       | to preceded with 0, 0x or 0X for o, x, X respectively for values different than zero|       |     |
 
-Note: we can combine the flags and use them together. 
-
-In this project, task 7, 9, 10, 11 and 12 show us how printf() width and flag options work. 
+Note: we can also combine the flags and use them together.
 
 ### precision ###
 Dealing with a floating number is slightly different than an integer number. Since a floating number has a decimal point, we need a way of specifying how many digits apper after the decimal point. This is when precision comes to the picture. 
 
-for example: the following table shows different results produced using different precision specifiers for a number n = 3.74767898.
+For example: the following table shows us how precision specifiers is used to produce different results for a number `n` = 3.74767898.
+
+Table 1.3 printf() Precision Options
+
 |precision Specifiers| Result | Description |
 |:-------------------|:-------|:------------|
 |%.0f                | 4      | 0 indicates :- the decimal point will disapear and nothing will be shown after the decimal point|
 |%.1f                |3.7      | 1 indicates : one places would be shown after the decimal point.|
-|%.2f                |3.75     | 2 indicates: two places would be shown after the decoimal point|
-|%.6f                | 3.747679| 6 places ...|
+|%.2f                |3.75     | 2 indicates: two places would be shown after the decimal point|
+|%.6f                | 3.747679| 6 indicates: 6 places would be shown after the decimal point|
 
 and so on. 
 
-Note: if there is no dot and a number specified , the default `%.6f` will be used. It is also possible to specify both a width and a precision at the same time. For example: `%3.2f` means a total width of three with two digits after the decimal point. We also can use flags with precision to print out according to our need requirement.  
+Note: if there is no dot and a number specified , the default `%.6f` will be used. Beside, it is also possible to specify both a width and a precision at the same time. For example: `%3.2f` means a total width of three with two digits after the decimal point. We also can use flags with precision depending on what we need to print out.  
 
-## length ###
+## Length Modifier ###
+A length modifier gives printf() additional type information for the corresponding argument. It helps us to communicate with printf() the orginal type so it convert the promoted type back to the orginal type properly. 
 
-Table 1.4 Length options and their description
+For example: `%hd` - indicates that the argument has type `short int` and an output of string of deciaml digits with a leading `-` sign for negative numbers. Here, `h` is the length modifier. The table below shows partial list of `Length Modifiers`.
+
+Table 1.4 Partial List of Length Modifiers and Their Description
 
 |Options |  Description  | Remarks |
 |:-------| :-------------|:--------|
-|h       | short int or unsigned short int | applies only to integer specifiers {`i`, `d`, `o`, `u`, `x` and `X`.|
+|h       | short int or unsigned short int | applies only to integer specifiers {`i`, `d`, `o`, `u`, `x` and `X`}.|
 |l       | a long int or unsigned long int for integer specifiers {`i`, `d`, `o`, `u`, `x` and `X`. | a wide character or wide character string for specifiers `c` and `s`. |
-|L       |interpreted as a long double  | only applies to floating point specifiers {`e`, `E`, `f`, `g` and `G` | 
+|L       |interpreted as a long double  | only applies to floating point specifiers {`e`, `E`, `f`, `g` and `G`} | 
 
 Specifically, Task 8 and 9 demonstrate how length and precision options respectively is used by a printf() function. 
 
+## Return Value ##
+
+If successful, a printf() function has a return value of integer which is the number of characters printed, excluding the null byte used to end output to strings. However, if an output error is encountered, a negative value will be returned.
+
 ## Conclusion ##
 
-In general, this project allow us to learn how printf() function actually works and the different options used by it to create a desired output depending on a thing that we are trying to print. In addition, we also learn how to specify how wide our field should be and how to alter the result using different `flags` and `length` options. 
+In general, this project allow us to learn how printf() function actually works and the different options used by it to create a desired output depending on a thing that we are trying to print. In addition, we also learn how to specify how wide our field should be and how to alter the result using different options such as `flags` and `length modifier`.  
 
 ## Mandatory Tasks ##
 ***
