@@ -60,7 +60,7 @@ Table 1.1 Partial List of Specifiers and their output.
 
 Other Format tags prototypes of printf() are [width][flags][.precision] and [length modifier].
 
-### Width ###
+## Width ##
 Width is one of `printf()` special option that lets us to pre-determine size of the result rather than simply take as much space as needed. 
 
     * (number) - is minimum number of characters to be printed.
@@ -68,7 +68,7 @@ Width is one of `printf()` special option that lets us to pre-determine size of 
     Note: if the number to be printed is shorter than the specified space, the result will be padded with blank spaces or a leading zeros, a dollar, equal or a star signs inorder to keep the bad guys from changing the blank space into something else.
     * * - here the width is specified as "an additional integer value argument preceding the argument that has to be formatted".
 
-### Flags ###
+## Flags ##
 
 printf() also can use an option called `flags` following the character % to modify results. For instance, a `-` flag justify a number to the left and a plus (`+`) in the format specifier print a positive number and zero. The table below shows  Partial list of flags used by `printf()`.
 
@@ -83,7 +83,7 @@ Table 1.2: Partial list of flags and their discription
 
 Note: we can also combine the flags and use them together.
 
-### precision ###
+## precision ##
 Dealing with a floating number is slightly different than an integer number. Since a floating number has a decimal point, we need a way of specifying how many digits apper after the decimal point. This is when precision comes to the picture. 
 
 For example: the following table shows us how precision specifiers is used to produce different results for a number `n` = 3.74767898.
