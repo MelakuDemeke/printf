@@ -75,7 +75,7 @@ Width is one of printf()'s special option that lets it to pre-determine size of 
 
 printf() can use different options called `flags` to modify results. For instance, a `-` flag justify a number to the left. It can also print a positive number and zero by using a plus (`+`) in the format specifier. Partial list of flags are shown in the table below.
 
-Table 1.2: Flags and their discriptions 
+Table 1.2: Partial list of flags and their discription 
 
 |Flag   | Discription | Example | Remarks |
 |:-------|:-----------|:--------|:--------|
@@ -84,13 +84,40 @@ Table 1.2: Flags and their discriptions
 |0       | to leading zero fill | %03i        |  Left-pads the number with zeroes (0) instead of spaces|
 |#       | to preceded with 0, 0x or 0X for o, x, X respectively for values different than zero|       |     |
 
+Note: we can combine the flags and use them together. 
 
-
-
+In this project, task 7, 9, 10, 11 and 12 show us how printf() width and flag options work. 
 
 ### precision ###
+Dealing with a floating number is slightly different than an integer number. Since a floating number has a decimal point, we need a way of specifying how many digits apper after the decimal point. This is when precision comes to the picture. 
 
-### length ###
+for example: the following table shows different results produced using different precision specifiers for a number n = 3.74767898.
+|precision Specifiers| Result | Description |
+|:-------------------|:-------|:------------|
+|%.0f                | 4      | 0 indicates :- the decimal point will disapear and nothing will be shown after the decimal point|
+|%.1f                |3.7      | 1 indicates : one places would be shown after the decimal point.|
+|%.2f                |3.75     | 2 indicates: two places would be shown after the decoimal point|
+|%.6f                | 3.747679| 6 places ...|
+
+and so on. 
+
+Note: if there is no dot and a number specified , the default `%.6f` will be used. It is also possible to specify both a width and a precision at the same time. For example: `%3.2f` means a total width of three with two digits after the decimal point. We also can use flags with precision to print out according to our need requirement.  
+
+## length ###
+
+Table 1.4 Length options and their description
+
+|Options |  Description  | Remarks |
+|:-------| :-------------|:--------|
+|h       | short int or unsigned short int | applies only to integer specifiers {`i`, `d`, `o`, `u`, `x` and `X`.|
+|l       | a long int or unsigned long int for integer specifiers {`i`, `d`, `o`, `u`, `x` and `X`. | a wide character or wide character string for specifiers `c` and `s`. |
+|L       |interpreted as a long double  | only applies to floating point specifiers {`e`, `E`, `f`, `g` and `G` | 
+
+Specifically, Task 8 and 9 demonstrate how length and precision options respectively is used by a printf() function. 
+
+## Conclusion ##
+
+In general, this project allow us to learn how printf() function actually works and the different options used by it to create a desired output depending on a thing that we are trying to print. In addition, we also learn how to specify how wide our field should be and how to alter the result using different `flags` and `length` options. 
 
 ## Mandatory Tasks ##
 ***
@@ -140,7 +167,7 @@ Table 1.2: Flags and their discriptions
 14. The flood of print has turned reading into a process of gulping rather than savoring
     * Handle the following custom conversion specifier:
       * `R`: prints the rot13'ed string
-15. *
+15. `*`
     * All the above options work well together.
 
 ***
